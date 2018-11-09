@@ -1,4 +1,4 @@
-package com.example.jee;
+package com.example.login;
 
 public class LoginService {
 	public boolean validateUser(String user, String password) {

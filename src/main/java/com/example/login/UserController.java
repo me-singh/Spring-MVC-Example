@@ -1,4 +1,4 @@
-package com.example.springMVC;
+package com.example.login;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
