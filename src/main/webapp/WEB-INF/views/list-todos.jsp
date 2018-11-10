@@ -3,8 +3,8 @@
 <title>Yahoo!!</title>
 </head>
 <body>
-Welcome ${name}.
+Hi ${name}
 <br>
-Manage your todos <a href="/list-todos">HERE</a>
+Todos:${todos}
 </body>
 </html>
