@@ -9,7 +9,11 @@
 
 <body>
 
-Hi ${name}
+<div class="container">
+	<h3>Hi ${name}</h3>
+</div>
+
+<br>
 
 <div class="container">
 

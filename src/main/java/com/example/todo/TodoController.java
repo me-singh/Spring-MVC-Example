@@ -2,9 +2,12 @@ package com.example.todo;
 
 import java.util.Date;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,13 +28,17 @@ public class TodoController {
 	
 	@RequestMapping(value="/add-todo", method = RequestMethod.GET)
 	public String showAddTodoPage(ModelMap model) {
+		model.addAttribute("todo",new Todo());
 		return "todos";
 	}
 	
 	@RequestMapping(value="/add-todo", method = RequestMethod.POST)
-	public String addTodo(@RequestParam String desc, ModelMap model) {
+	public String addTodo(@Valid Todo todo,BindingResult result, ModelMap model) {  //Todo todo replaced @RequestParam String desc
+		if(result.hasErrors()) {
+			return "todos";
+		}
 		model.clear();
-		todoService.addTodo("amit", desc, new Date(), false);
+		todoService.addTodo("amit", todo.getDesc(), new Date(), false);
 		return "redirect:/list-todos";
 	}
 	
