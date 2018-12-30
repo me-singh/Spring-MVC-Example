@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:23:45:53 +0530] "GET /BloggerSite/home HTTP/1.1" 404 949 http-bio-8080-exec-1 228
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:23:45:53 +0530] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-2 7

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+WEB APP USING SPRING MVC - Todo Manager
+ -->
 <!-- webapp/WEB-INF/web.xml -->
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
@@ -25,5 +28,19 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<filter>
+	    <filter-name>springSecurityFilterChain</filter-name>
+	    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	 
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+ 		<url-pattern>/*</url-pattern>
+    </filter-mapping> 
 
+	<!-- to handle jsp exeptions and all possible exeptions(most generic) -->
+	<error-page>
+	    <location>/WEB-INF/views/jsp/error.jsp</location>
+	</error-page>
 </web-app>

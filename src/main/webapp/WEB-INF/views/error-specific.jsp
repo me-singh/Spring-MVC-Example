@@ -2,9 +2,7 @@
 <%@ include file="common/navigation.jspf" %>
 
 <div class="container">
-	Welcome ${name}.
-	<br>
-	Manage your todos <a href="/list-todos">HERE</a>
+	This is the Exeption Page for <b>TODO Controller</b> Exeption.
 </div>
 
 <%@ include file="common/footer.jspf" %>
